@@ -256,7 +256,7 @@ Example:
   <TopHeader />
   <section class="section">
     <Route {currentRoute} />
-    <p>Current params are: {currentRoute.namedParams} and {currentRoute.queryParams)
+    <p>Current params are: {currentRoute.namedParams} and {currentRoute.queryParams}
   </section>
   <FooterContent />
 </div>
@@ -277,7 +277,11 @@ const routes = [
       {
         name: 'about-us',
         component: 'AboutUsLayout',
-        nestedRoutes: [{ name: 'company', component: CompanyPage }, { name: 'people', component: PeoplePage }]
+        nestedRoutes: [
+          { name: 'company', component: CompanyPage }, 
+          { name: 'people', component: PeoplePage },
+          { name: 'people/:name', component: PeoplePage },
+        ]
       }
     ]
   }

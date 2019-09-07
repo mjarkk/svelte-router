@@ -125,11 +125,20 @@ function pathWithSearch(currentRoute) {
   }
 }
 
+/**
+ * Removes the / from end and start of a route
+ * @param route
+ **/
+function trimRoute(route) {
+  return route.replace(/^\/+|\/+$/g, '');
+}
+
 module.exports = {
   anyEmptyNestedRoutes,
   compareRoutes,
   getNamedParams,
   getPathNames,
   nameToPath,
-  pathWithSearch
+  pathWithSearch,
+  trimRoute
 }
